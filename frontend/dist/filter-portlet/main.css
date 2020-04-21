@@ -1,0 +1,58 @@
+/* ---------- Variables ---------- */
+/*#d9534f; */
+/* ---------- CSS MIXINS ---------- */
+#filter-container .fr-data-grid {
+  table-layout: fixed;
+  width: 100%;
+}
+#filter-container .fr-data-grid td {
+  min-width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0;
+}
+#filter-container .fr-data-grid td:not(:first-of-type) {
+  padding-left: 0.5em;
+}
+#filter-container .fr-data-grid th {
+  font-weight: 400;
+  color: white;
+  background-color: #33485d;
+  padding: 0.6em 0.5em;
+  text-align: center;
+}
+#filter-container .fr-data-grid .fr-grid-body tr:hover {
+  background-color: #DBDBEA;
+}
+#filter-container .fr-color-cell {
+  height: 2em;
+}
+#filter-container .fr-action-cell i {
+  padding: 0 0.2em;
+}
+#filter-container .fr-centered-align {
+  text-align: center;
+  margin: 0 auto;
+}
+#filter-container .fr-color-th {
+  width: 2em;
+}
+#filter-container .fr-boolean-th {
+  width: 3em;
+}
+#filter-container .fr-date-th {
+  width: 7.6em;
+}
+#filter-container .fr-actions-th {
+  width: 3.4em;
+}
+#filter-container .fr-variable-actions {
+  margin-top: 2em;
+  float: right;
+}
+#filter-container .fr-variable-actions button {
+  margin-left: 1em;
+}
+#filter-container .fr-more-btn {
+  width: 100%;
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="net.evrem.service.model.GridItem" />
+	<import class="net.evrem.service.model.Note" />
+	<import class="net.evrem.service.model.RemindInfo" />
+	<import class="net.evrem.service.model.TodoNote" />
+	<import class="net.evrem.service.model.UserDetail" />
+	<import class="net.evrem.service.model.UserEvrem" />
+	<class name="net.evrem.service.model.impl.GridItemImpl" table="grid_item">
+		<cache usage="read-write" />
+		<id name="gridItemId" column="griditem_id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="noteId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="note_id" />
+		<property name="w" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="h" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="x" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="y" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="net.evrem.service.model.impl.NoteImpl" table="note">
+		<cache usage="read-write" />
+		<id name="noteId" column="note_id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="user_id" />
+		<property name="hasCheck" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="has_check" />
+		<property name="hasTime" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="has_time" />
+		<property name="hasReminder" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="has_reminder" />
+		<property name="hasTodo" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="has_todo" />
+		<property name="hasRepeat" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="has_repeat" />
+		<property name="hasColor" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="has_color" />
+		<property name="hasWall" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="has_wall" />
+		<property name="text" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="isDone" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="is_done" />
+		<property name="eventTime" type="org.hibernate.type.TimestampType" column="event_time" />
+		<property name="period" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="color" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" column="created_date" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" column="modified_date" />
+		<property name="isDeleted" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="is_deleted" />
+	</class>
+	<class name="net.evrem.service.model.impl.RemindInfoImpl" table="remind_info">
+		<cache usage="read-write" />
+		<id name="remindInfoId" column="remindinfo_id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="noteId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="note_id" />
+		<property name="remindDate" type="org.hibernate.type.TimestampType" column="remind_date" />
+		<property name="remindSubject" type="com.liferay.portal.dao.orm.hibernate.StringType" column="remind_subject" />
+		<property name="recipientEmails" type="com.liferay.portal.dao.orm.hibernate.StringType" column="recipient_emails" />
+		<property name="lastRemindTime" type="org.hibernate.type.TimestampType" column="last_remind_time" />
+	</class>
+	<class name="net.evrem.service.model.impl.TodoNoteImpl" table="todo_note">
+		<cache usage="read-write" />
+		<id name="todoNoteId" column="todonote_id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="noteId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="note_id" />
+		<property name="isDone" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="is_done" />
+		<property name="text" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sortNo" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="sort_no" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" column="modified_date" />
+	</class>
+	<class name="net.evrem.service.model.impl.UserDetailImpl" table="user_detail">
+		<cache usage="read-write" />
+		<id name="userDetailId" column="userdetail_id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="user_id" />
+		<property name="timeZoneId" type="com.liferay.portal.dao.orm.hibernate.StringType" column="timezone_id" />
+	</class>
+</hibernate-mapping>

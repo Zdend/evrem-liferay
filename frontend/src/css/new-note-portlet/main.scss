@@ -1,0 +1,133 @@
+@import "../variables";
+@import "../mixins";
+@import "compass";
+@import "compass/css3/user-interface";
+
+#new-note-container{
+	.text-options-container{
+		list-style-type: none;
+		display: block;
+		li{
+			float: left;
+		}
+	}
+	
+	.note-textarea-wrapper{
+		width:33.3333%;
+		 #new-note-input{
+			resize: none;
+			width: 97%;
+		}
+	}
+	.note-buttons-wrapper{
+		width: 65%;
+		@include user-select(none);
+		
+		.note-buttons{
+			margin-top: 10px;
+			margin-left: 20px;
+			
+			li{
+				list-style-type: none;
+				display: inline;
+				margin-left: 10px;
+				color: $lightGrayColor;
+				i{
+					font-size: 35px;
+					padding: 3px;
+					&:hover{
+						color: $grayColor;
+					}
+					&.active{
+						color: $navyBlue;
+					}
+					&.save-btn{
+						margin-right: 30px;
+						&:hover{
+							color: $blueColor;
+						}
+					}
+					&.delete-btn{
+						&:hover{
+							color: $rudeColor;
+						}
+					}
+					&.clear-btn{
+						margin-left: 30px;
+						&:hover{
+							color: $greenColor;
+						}
+					}
+					&.restore-btn{
+						&:hover{
+							color: $yellowColor;
+						}
+					}
+				}
+			}
+		}
+	}
+	.block-container{
+		& > div{
+			width: 290px;
+			display: inline-table;
+		}
+	
+		#note-color-select{
+			color: white;
+			border: none;
+			height: 24px;
+			margin-left:1px;
+		}
+		#isdone-input{
+			border: none;
+			height: 24px;
+			margin-left:1px;
+			color: white;
+			@include user-select(none);
+			@include hover-transition;
+			&.isdone-checked{
+				background-color: $greenColor;
+			}
+			&.isdone-unchecked{
+				background-color: $rudeColor;
+			}
+		}
+		
+	}
+	.nn-message-container{
+		color: white;
+		padding: 10px;
+		margin: 10px 0;
+		.nn-message-dismiss{
+			float: right;
+			cursor: pointer;
+			&:hover{
+				color: $grayColor;
+			}
+		}
+		li{
+			list-style-type: none;
+		}
+	}
+	.nn-validation-container{
+		background-color: $rudeColor;
+	}
+	.nn-info-container{
+		background-color: $greenColor;
+	}
+
+}
+/* POPOVER IS NOT INSIDE OF PORTLET CONTAINER */
+.color-palette{
+	
+			.color-square{
+				width: 50px;
+				height: 50px;
+				border: 2px solid white;
+				
+				&:hover{
+					border: 2px solid #2c3e50;
+				}
+			}
+}

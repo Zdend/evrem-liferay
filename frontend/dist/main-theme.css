@@ -1,0 +1,421 @@
+/* ---------- Variables ---------- */
+/*#d9534f; */
+/* ---------- CSS MIXINS ---------- */
+/* ---------- Variables ---------- */
+/*#d9534f; */
+/* ---------- CSS MIXINS ---------- */
+.evrem-message .message-container {
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  min-height: 2.5em;
+}
+.evrem-message .message-container .message-dismiss {
+  float: right;
+  cursor: pointer;
+}
+.evrem-message .message-container .message-dismiss:hover {
+  color: #333333;
+}
+.evrem-message .validation-container {
+  background-color: #bf1e2d;
+}
+.evrem-message .info-container {
+  background-color: #5cb85c;
+}
+
+/* ---------- Base styles ---------- */
+html {
+  overflow-y: scroll;
+}
+
+body {
+  color: #333333;
+  background-color: transparent;
+}
+body ::-moz-selection {
+  color: white;
+  background: #333333;
+}
+body ::selection {
+  color: white;
+  background: #333333;
+}
+
+#wrapper {
+  padding: 0 5em 0;
+  min-width: 960px;
+}
+
+/* ---------- Header ---------- */
+#heading {
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#heading .site-title {
+  width: 90px;
+  float: left;
+  margin-top: 35px;
+}
+#heading .active-a, #heading #navigation ul li a:focus, #heading #navigation ul li a:hover, #heading #navigation ul .selected a, #heading .profile-link-container #profile-link-inner:focus, #heading .profile-link-container #profile-link-inner:hover, #heading .profile-link-container #profile-link-inner.selected, #heading .profile-link-container a[aria-expanded="true"] #profile-link-inner {
+  background-color: #f0ad4e;
+  color: white;
+}
+#heading #navigation ul {
+  list-style-type: none;
+  font-family: Raleway;
+  font-weight: 100;
+  margin: auto;
+  text-align: center;
+}
+#heading #navigation ul li {
+  font-size: 40px;
+  margin-top: 60px;
+  display: inline-block;
+}
+#heading #navigation ul li a {
+  color: #bf1e2d;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid transparent;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#heading #navigation ul li a:focus, #heading #navigation ul li a:hover {
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#heading .profile-link-container {
+  margin-top: 30px;
+  margin-right: 40px;
+  float: right;
+}
+#heading .profile-link-container #profile-link-inner {
+  font-size: 40px;
+  padding: 17px;
+  color: #bf1e2d;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#heading .profile-link-container #profile-link-inner:focus, #heading .profile-link-container #profile-link-inner:hover, #heading .profile-link-container #profile-link-inner.selected {
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#heading .profile-link-container a[aria-expanded="true"] #profile-link-inner {
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+
+/* ---------- Footer ---------- */
+#footer {
+  font-weight: 300;
+  color: #999999;
+  margin: 0 10px 150px 10px;
+}
+#footer a {
+  color: #999999;
+  margin-right: 15px;
+}
+#footer a:focus, #footer a:hover {
+  color: #333333;
+}
+#footer #left-footer-container {
+  float: left;
+}
+#footer #right-footer-container {
+  float: right;
+}
+#footer #right-footer-container i {
+  color: #DBDBEA;
+  font-size: 40px;
+  margin-left: 25px;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#footer #right-footer-container i.fa-facebook:hover {
+  color: #3c599f;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#footer #right-footer-container i.fa-twitter:hover {
+  color: #00acee;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#footer #right-footer-container i.fa-google-plus:hover {
+  color: #d82a21;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+
+/* ---------- Mixins ---------- */
+.cleaner {
+  clear: both;
+  height: 1px;
+  width: 100%;
+}
+
+.hide, .invisible, .evrem > :not(.portlet-dockbar) #hrefFm {
+  position: absolute;
+  top: 9999px;
+  right: 9999px;
+}
+
+.nocursor {
+  cursor: default !important;
+}
+
+.pointer-cursor {
+  cursor: pointer !important;
+}
+
+.invisible, .visible {
+  overflow: hidden;
+}
+
+.invisible {
+  visibility: hidden;
+  opacity: 0;
+  -moz-transition: all, 0.7s, ease-in-out, 0s;
+  -o-transition: all, 0.7s, ease-in-out, 0s;
+  -webkit-transition: all, 0.7s, ease-in-out, 0s;
+  transition: all, 0.7s, ease-in-out, 0s;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  -moz-transition: opacity, 0.7s, ease-in-out;
+  -o-transition: opacity, 0.7s, ease-in-out;
+  -webkit-transition: opacity, 0.7s, ease-in-out;
+  transition: opacity, 0.7s, ease-in-out;
+}
+
+.hover-transition {
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+
+.striked-text {
+  text-decoration: line-through;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/* ---------- Spinner ---------- */
+.spinner {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 3000;
+  opacity: 0.97;
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  display: none;
+}
+.spinner.active {
+  -moz-animation-play-state: running;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  display: block;
+}
+.spinner .spinner-square {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  margin: 30vh auto;
+  -moz-animation: sk-rotatePlane 1.2s infinite ease-in-out;
+  -webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
+  animation: sk-rotatePlane 1.2s infinite ease-in-out;
+}
+
+@-moz-keyframes sk-rotatePlane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+@-webkit-keyframes sk-rotatePlane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+@keyframes sk-rotatePlane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+/* ---------- Page layout ---------- */
+.wall-layout .row-fluid [class*="span"], .wall-layout [class*="span"] {
+  margin-left: 0px;
+}
+.wall-layout .row-fluid .span4 {
+  width: 33.333333%;
+}
+
+/* ---------- Bootswatch modification ----------*/
+.nav .user-notification-link {
+  padding: 10px 15px 9px 10px !important;
+}
+.nav .dropdown {
+  height: 50px;
+}
+
+.evrem > :not(.portlet-dockbar) div {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.evrem > :not(.portlet-dockbar) td.separator {
+  border: none !important;
+}
+.evrem > :not(.portlet-dockbar) img {
+  max-width: none;
+}
+.evrem > :not(.portlet-dockbar) a {
+  text-decoration: none;
+}
+.evrem > :not(.portlet-dockbar) .collapse {
+  display: none;
+  visibility: hidden;
+}
+.evrem > :not(.portlet-dockbar) .collapse.in {
+  display: block;
+  visibility: visible;
+}
+.evrem > :not(.portlet-dockbar) tr.collapse.in {
+  display: table-row;
+}
+.evrem > :not(.portlet-dockbar) tbody.collapse.in {
+  display: table-row-group;
+}
+.evrem > :not(.portlet-dockbar) .collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: .35s;
+  -o-transition-duration: .35s;
+  transition-duration: .35s;
+  -webkit-transition-property: height, visibility;
+  -o-transition-property: height, visibility;
+  transition-property: height, visibility;
+}
+.evrem > :not(.portlet-dockbar) ul {
+  margin: 0;
+}
+.evrem > :not(.portlet-dockbar) .row-fluid [class*="span"], .evrem > :not(.portlet-dockbar) [class*="span"] {
+  margin-left: 0px;
+}
+.evrem > :not(.portlet-dockbar) .row-fluid .span4 {
+  width: 33.333333%;
+}
+.evrem > :not(.portlet-dockbar) .dropdown-menu {
+  -moz-border-radius: 0 / 0;
+  -webkit-border-radius: 0 0;
+  border-radius: 0 / 0;
+  padding: 0px;
+  min-width: 180px;
+  border: none;
+  left: -115px;
+  margin-top: 1px;
+}
+.evrem > :not(.portlet-dockbar) .dropdown-menu > li > a {
+  padding: 10px 20px;
+}
+.evrem > :not(.portlet-dockbar) .dropdown-menu > li > a:hover, .evrem > :not(.portlet-dockbar) .dropdown-menu > li > a:focus, .evrem > :not(.portlet-dockbar) .dropdown-menu > li > .dropdown-submenu:hover > a, .evrem > :not(.portlet-dockbar) .dropdown-menu > li > .dropdown-submenu:focus > a {
+  background-color: #f0ad4e;
+  background-image: none;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+.evrem > :not(.portlet-dockbar) .dropdown-menu .divider {
+  border-bottom: 0;
+  margin: 0;
+}
+.evrem > :not(.portlet-dockbar) .modal-footer {
+  -moz-border-radius: 0 / 0;
+  -webkit-border-radius: 0 0;
+  border-radius: 0 / 0;
+}
+.evrem > :not(.portlet-dockbar) .portlet-title {
+  position: relative;
+  bottom: 3px;
+  right: 5px;
+}
+.evrem > :not(.portlet-dockbar) h1 {
+  font-size: 48px;
+  font-weight: 200;
+}
+.evrem > :not(.portlet-dockbar) h2 {
+  font-size: 36px;
+  font-weight: 200;
+}
+.evrem > :not(.portlet-dockbar) h3 {
+  font-size: 28px;
+  font-weight: 200;
+}
+.evrem > :not(.portlet-dockbar) h4 {
+  font-size: 24px;
+  font-weight: 200;
+}
+.evrem > :not(.portlet-dockbar) h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+@media (max-width: 979px) {
+  .evrem > :not(.portlet-dockbar) .btn {
+    padding: 9px 20px;
+  }
+}
+
+#p_p_id_commonsfunctionportlet_WAR_commonsfunctionportlet_ {
+  display: none;
+}

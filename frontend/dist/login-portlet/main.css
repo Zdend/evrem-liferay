@@ -1,0 +1,108 @@
+/* ---------- Variables ---------- */
+/*#d9534f; */
+/* ---------- CSS MIXINS ---------- */
+.lg-title-background {
+  overflow-y: auto;
+}
+.lg-title-background body {
+  background: url("../images/title-background3.jpg") no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+#login-container {
+  min-height: 690px;
+}
+#login-container .lg-centered-box {
+  width: 40%;
+  min-height: 50%;
+  padding: 1em;
+  margin: auto;
+  text-align: center;
+}
+#login-container .lg-centered-box .lg-login-wrapper {
+  min-height: 400px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 3.5em 1em;
+  text-align: left;
+}
+#login-container .lg-centered-box .lg-login-wrapper .lg-login-inner {
+  margin: auto;
+  width: 276px;
+}
+#login-container .lg-centered-box .lg-login-wrapper .lg-login-inner h2 {
+  font-size: 1.5em;
+  line-height: 20px;
+  margin: 0 0 1em 0;
+  font-weight: 200;
+}
+#login-container .lg-centered-box .lg-login-block .lg-login-btn {
+  float: left;
+}
+#login-container .lg-centered-box .lg-login-block .lg-remember-forgotten {
+  float: right;
+  text-align: right;
+  margin-left: 1em;
+}
+#login-container .lg-centered-box .lg-login-block .lg-remember-forgotten li {
+  list-style-type: none;
+  font-size: 14px;
+}
+#login-container .lg-centered-box .lg-login-block .lg-remember-forgotten li span {
+  font-size: 14px;
+}
+#login-container .lg-centered-box .lg-social-login-block i {
+  font-size: 3em;
+  margin: 0 0.55em;
+}
+#login-container .lg-centered-box input[type="text"], #login-container .lg-centered-box input[type="password"] {
+  width: 260px;
+  color: #33485d;
+}
+#login-container .lg-centered-box .lg-header-wrapper {
+  display: table;
+}
+#login-container .lg-centered-box .lg-header-wrapper .lg-header-logo {
+  background: transparent url("../images/evrem-bird-logo70.png") no-repeat;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1em auto;
+}
+#login-container .lg-centered-box .lg-header-wrapper .lg-title-welcome {
+  font-weight: 300;
+  margin-bottom: 0.4em;
+  text-shadow: 1px 1px 7px #33485d;
+}
+#login-container .lg-centered-box .lg-header-wrapper .lg-title-description {
+  font-size: 1.4em;
+  line-height: 30px;
+  text-shadow: 1px 1px 7px #33485d;
+}
+#login-container .lg-centered-box .lg-desc-bold {
+  font-weight: 600;
+}
+#login-container .lg-centered-box .lg-footer-wrapper {
+  margin-top: 1em;
+}
+
+#lg-signup-captcha {
+  width: 310px;
+}
+
+.lg-registration-confirmation {
+  text-align: left;
+}
+.lg-registration-confirmation .modal-body {
+  width: 340px;
+  margin: 0 auto;
+}
+.lg-registration-confirmation .modal-body h4 {
+  margin: 1em 0;
+  font-weight: 200;
+  font-size: 20px;
+}
+.lg-registration-confirmation #timezone-select {
+  width: 250px;
+}

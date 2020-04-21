@@ -1,0 +1,68 @@
+@import "../variables";
+@import "../mixins";
+@import "compass";
+@import "compass/css3/user-interface";
+
+
+#upcoming-container{
+	.uc-termblocks-list{
+		li{
+			list-style-type: none;
+			display: inline-block;
+			margin-right: 3.3333%;
+			width: 30%;
+			
+			table{
+				    table-layout: fixed;
+				    width: 100%;
+				    tr:hover{
+				    	td:not(:last-of-type){
+					    	background-color: $lightGrayColor;
+					    	cursor: pointer;
+						}
+				    }
+			}
+		}
+		
+		.uc-check-btn{
+			@include hover-transition;
+			cursor: pointer;
+			padding-left: 15px;
+			&:hover{
+				color: $rudeColor;
+			}
+		}
+		
+		.uc-checked-btn:hover{
+			color: $greenColor;
+		}
+		
+		.uc-date-col{
+			width: 23%;
+			min-width:83px;
+		}
+		.uc-time-col{
+			width: 9%;
+			min-width: 32px;
+		}
+		.uc-text-col{
+			width: 70%;
+			overflow: hidden;
+		}
+		.uc-check-col{
+			width: 0%;
+		}
+		
+		.uc-text-cell{
+			overflow: hidden;
+			white-space: pre;
+		}
+		
+	}
+	.uc-more-btn{
+		margin-top: 1em;
+		width: 100%;
+		
+	}
+
+}

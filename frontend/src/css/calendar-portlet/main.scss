@@ -1,0 +1,66 @@
+@import "../variables";
+@import "../mixins";
+@import "compass";
+@import "compass/css3/user-interface";
+
+
+#calendar-container{
+	#calendar{
+		.fc-content{
+			color: white;
+		}
+		.fc-button{
+			border: none;
+			background-color: $navyBlue;
+			color: white;
+			text-decoration: none;
+			text-shadow: none;
+			@include hover-transition;
+			
+			&:hover, &:focus {
+				color: white;
+				@include hover-transition;
+			}
+		}
+		.fc-corner-left, .fc-corner-right{
+			@include border-radius(0px);
+		}
+		.fc-state-hover{
+			background-color: lighten($navyBlue, 10%);
+		}
+		.fc-state-default{
+			background-image: none;
+		}
+		.fc-state-active{
+			background-color: darken($navyBlue, 10%);
+		}
+		.fc-toolbar button{
+			height: 100%;
+			padding: 10px 15px;
+		}
+		.fc-event{
+			@include border-radius(0px);
+			margin: 0
+		}
+		.fc-time-grid-event .fc-bg{
+			background-color: transparent;
+		}
+		.fc-basicWeek-view,.fc-month-view{
+			 td.fc-day:hover{
+				background-color: lighten($navyBlue, 50%);
+				cursor: pointer;
+			}
+		}
+		.fc-day-header{
+			background-color: $navyBlue;
+			font-size: 25px;
+			padding: 13px 0;
+			color: white;
+			
+		}
+		.fc-more{
+			color: $navyBlue;
+		}
+	}
+	
+}

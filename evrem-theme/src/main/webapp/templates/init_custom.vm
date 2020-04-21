@@ -1,0 +1,18 @@
+#*
+This file allows you to override and define new Velocity variables.
+*#
+#set ($css_class = "evrem")
+#set ($site_logo_height = "47")
+#set ($site_logo_width = "131")
+
+#set ($base_url = $propsUtil.get("evrem.base.url"))
+
+#set ($loginHideClass = "hide")
+#set ($loginBgClass = "lg-title-background")
+
+#if ($is_signed_in)
+	#set ($loginHideClass = "")
+	#set ($loginBgClass = "")
+#end
+
+#set ($is_evrem_admin = ($is_signed_in) && $permissionChecker.isCompanyAdmin($company_id))

@@ -1,0 +1,21 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "authors": [
+    "Zdend <8145571+Zdend@users.noreply.github.comtrum.cz>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fontawesome": "~4.2.0",
+    "gridster.js": "~0.5.6",
+    "fullcalendar": "~2.2.3"
+  }
+}

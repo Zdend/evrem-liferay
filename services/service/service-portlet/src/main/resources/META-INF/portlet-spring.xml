@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="net.evrem.service.service.GridItemLocalService" class="net.evrem.service.service.impl.GridItemLocalServiceImpl" />
+	<bean id="net.evrem.service.service.persistence.GridItemPersistence" class="net.evrem.service.service.persistence.GridItemPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="evremDataSource" />
+		<property name="sessionFactory" ref="evremSessionFactory" />
+	</bean>
+	<bean id="net.evrem.service.service.NoteLocalService" class="net.evrem.service.service.impl.NoteLocalServiceImpl" />
+	<bean id="net.evrem.service.service.persistence.NotePersistence" class="net.evrem.service.service.persistence.NotePersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="evremDataSource" />
+		<property name="sessionFactory" ref="evremSessionFactory" />
+	</bean>
+	<bean id="net.evrem.service.service.RemindInfoLocalService" class="net.evrem.service.service.impl.RemindInfoLocalServiceImpl" />
+	<bean id="net.evrem.service.service.persistence.RemindInfoPersistence" class="net.evrem.service.service.persistence.RemindInfoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="evremDataSource" />
+		<property name="sessionFactory" ref="evremSessionFactory" />
+	</bean>
+	<bean id="net.evrem.service.service.TodoNoteLocalService" class="net.evrem.service.service.impl.TodoNoteLocalServiceImpl" />
+	<bean id="net.evrem.service.service.persistence.TodoNotePersistence" class="net.evrem.service.service.persistence.TodoNotePersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="evremDataSource" />
+		<property name="sessionFactory" ref="evremSessionFactory" />
+	</bean>
+	<bean id="net.evrem.service.service.UserDetailLocalService" class="net.evrem.service.service.impl.UserDetailLocalServiceImpl" />
+	<bean id="net.evrem.service.service.persistence.UserDetailPersistence" class="net.evrem.service.service.persistence.UserDetailPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="evremDataSource" />
+		<property name="sessionFactory" ref="evremSessionFactory" />
+	</bean>
+	<bean id="net.evrem.service.service.UserEvremLocalService" class="net.evrem.service.service.impl.UserEvremLocalServiceImpl" />
+</beans>

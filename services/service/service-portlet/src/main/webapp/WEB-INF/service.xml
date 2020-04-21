@@ -1,0 +1,137 @@
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+
+<service-builder package-path="net.evrem.service">
+    <author>Zdenek Vecek</author>
+	<namespace>EvremNote</namespace>
+	<entity name="Note" local-service="true" remote-service="false" table="note" data-source="evremDataSource" session-factory="evremSessionFactory" tx-manager="evremTransactionManager">
+		<!-- PK fields -->
+
+		<column name="noteId" type="long" primary="true" db-name="note_id" />
+		<column name="userId" type="long" db-name="user_id" />
+
+		<!-- Note setting -->
+
+		<column name="hasCheck" type="boolean" db-name="has_check" />
+		<column name="hasTime" type="boolean" db-name="has_time"/>
+		<column name="hasReminder" type="boolean" db-name="has_reminder"/>
+		<column name="hasTodo" type="boolean" db-name="has_todo"/>
+		<column name="hasRepeat" type="boolean" db-name="has_repeat" />
+		<column name="hasColor" type="boolean" db-name="has_color"/>
+		<column name="hasWall" type="boolean" db-name="has_wall"/>
+
+		<!-- Values -->
+
+		<column name="text" type="String" db-name="text"/>
+		<column name="isDone" type="boolean" db-name="is_done"/>
+		<column name="eventTime" type="Date" db-name="event_time"/>
+		<column name="period" type="String" db-name="period"/>
+		<column name="color" type="String" db-name="color"/>
+		<column name="createdDate" type="Date" db-name="created_date"/>
+		<column name="modifiedDate" type="Date" db-name="modified_date"/>
+		<column name="isDeleted" type="boolean" db-name="is_deleted"/>
+		
+		
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="noteId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="AllNotesByUserId" return-type="Collection">
+			<finder-column name="userId" />
+		</finder>
+
+		<finder name="UserIdOnWall" return-type="Collection" where="hasWall=1 AND isDeleted=0">
+			<finder-column name="userId" />
+		</finder>
+
+		<finder name="UserId" return-type="Collection" where="isDeleted=0">
+			<finder-column name="userId" />
+		</finder>
+		
+		<finder name="DeletedNotesByUserId" return-type="Collection" where="isDeleted=1">
+			<finder-column name="userId" />
+		</finder>
+		
+		<finder name="EventTime" return-type="Collection" where="hasTime=1 AND isDeleted=0">
+			<finder-column name="userId" />
+		</finder>
+
+		<finder name="RemindDate" return-type="Collection" where="hasReminder=1 AND isDeleted=0">
+			<finder-column name="userId" />
+		</finder>
+
+	</entity>
+	
+	<entity name="RemindInfo"  local-service="true" remote-service="false" table="remind_info" data-source="evremDataSource" session-factory="evremSessionFactory" tx-manager="evremTransactionManager">
+		<!-- PK fields -->
+
+		<column name="remindInfoId" type="long" primary="true" db-name="remindinfo_id"/>
+        <column name="noteId" type="long" db-name="note_id"/>
+
+		<column name="remindDate" type="Date" db-name="remind_date"/>
+		<column name="remindSubject" type="String" db-name="remind_subject"/>
+		<column name="recipientEmails" type="String" db-name="recipient_emails"/>
+        
+		<column name="lastRemindTime" type="Date" db-name="last_remind_time"/>
+
+        <finder name="NoteId" return-type="RemindInfo">
+			<finder-column name="noteId" />
+		</finder>
+	</entity>
+	
+	<entity name="TodoNote" local-service="true" remote-service="false" table="todo_note" data-source="evremDataSource" session-factory="evremSessionFactory" tx-manager="evremTransactionManager" >
+		<!-- PK fields -->
+
+		<column name="todoNoteId" type="long" primary="true" db-name="todonote_id"/>
+        <column name="noteId" type="long" db-name="note_id"/>
+        
+		<column name="isDone" type="boolean" db-name="is_done"/>
+		<column name="text" type="String" db-name="text"/>
+		<column name="sortNo" type="int" db-name="sort_no"/>
+		<column name="modifiedDate" type="Date" db-name="modified_date"/>
+		
+		<finder name="NoteId" return-type="Collection">
+			<finder-column name="noteId" />
+		</finder>
+		
+		<finder name="NoteIdAndSortNo" return-type="TodoNote">
+			<finder-column name="noteId" />
+			<finder-column name="sortNo" />
+		</finder>
+	</entity>
+	
+	<entity name="GridItem" local-service="true" remote-service="false" table="grid_item" data-source="evremDataSource" session-factory="evremSessionFactory" tx-manager="evremTransactionManager" >
+		<!-- PK fields -->
+
+		<column name="gridItemId" type="long" primary="true" db-name="griditem_id"/>
+        <column name="noteId" type="long" db-name="note_id"/>
+        
+		<column name="w" type="int" db-name="w"/>
+		<column name="h" type="int" db-name="h"/>
+		<column name="x" type="int" db-name="x"/>
+		<column name="y" type="int" db-name="y"/>
+		
+		<finder name="NoteId" return-type="Note">
+			<finder-column name="noteId" />
+		</finder>
+	</entity>
+	
+	<entity name="UserDetail" local-service="true" remote-service="false" table="user_detail" data-source="evremDataSource" session-factory="evremSessionFactory" tx-manager="evremTransactionManager" >
+		<!-- PK fields -->
+
+		<column name="userDetailId" type="long" primary="true" db-name="userdetail_id"/>
+        <column name="userId" type="long" db-name="user_id"/>
+        
+		<column name="timeZoneId" type="String" db-name="timezone_id"/>
+
+		<finder name="UserId" return-type="UserDetail">
+			<finder-column name="userId" />
+		</finder>
+	</entity>
+	
+	<entity name="UserEvrem" local-service="true" remote-service="false"></entity>
+</service-builder>

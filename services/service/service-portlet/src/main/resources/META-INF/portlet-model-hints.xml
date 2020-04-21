@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="net.evrem.service.model.GridItem">
+		<field name="gridItemId" type="long" />
+		<field name="noteId" type="long" />
+		<field name="w" type="int" />
+		<field name="h" type="int" />
+		<field name="x" type="int" />
+		<field name="y" type="int" />
+	</model>
+	<model name="net.evrem.service.model.Note">
+		<field name="noteId" type="long" />
+		<field name="userId" type="long" />
+		<field name="hasCheck" type="boolean" />
+		<field name="hasTime" type="boolean" />
+		<field name="hasReminder" type="boolean" />
+		<field name="hasTodo" type="boolean" />
+		<field name="hasRepeat" type="boolean" />
+		<field name="hasColor" type="boolean" />
+		<field name="hasWall" type="boolean" />
+		<field name="text" type="String">
+			<hint name="max-length">4000</hint>
+		</field>
+		<field name="isDone" type="boolean" />
+		<field name="eventTime" type="Date" />
+		<field name="period" type="String" />
+		<field name="color" type="String" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="isDeleted" type="boolean" />
+	</model>
+	<model name="net.evrem.service.model.RemindInfo">
+		<field name="remindInfoId" type="long" />
+		<field name="noteId" type="long" />
+		<field name="remindDate" type="Date" />
+		<field name="remindSubject" type="String" />
+		<field name="recipientEmails" type="String" />
+		<field name="lastRemindTime" type="Date" />
+	</model>
+	<model name="net.evrem.service.model.TodoNote">
+		<field name="todoNoteId" type="long" />
+		<field name="noteId" type="long" />
+		<field name="isDone" type="boolean" />
+		<field name="text" type="String" />
+		<field name="sortNo" type="int" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="net.evrem.service.model.UserDetail">
+		<field name="userDetailId" type="long" />
+		<field name="userId" type="long" />
+		<field name="timeZoneId" type="String" />
+	</model>
+</model-hints>

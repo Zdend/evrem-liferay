@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="net.evrem.service.model.impl.GridItemModelImpl">
+		<attributes>
+			<id name="gridItemId">
+				<column name="GRIDITEM_ID" />
+			</id>
+			<basic name="noteId">
+				<column name="NOTE_ID" />
+			</basic>
+			<basic name="w" />
+			<basic name="h" />
+			<basic name="x" />
+			<basic name="y" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="net.evrem.service.model.impl.NoteModelImpl">
+		<attributes>
+			<id name="noteId">
+				<column name="NOTE_ID" />
+			</id>
+			<basic name="userId">
+				<column name="USER_ID" />
+			</basic>
+			<basic name="hasCheck">
+				<column name="HAS_CHECK" />
+			</basic>
+			<basic name="hasTime">
+				<column name="HAS_TIME" />
+			</basic>
+			<basic name="hasReminder">
+				<column name="HAS_REMINDER" />
+			</basic>
+			<basic name="hasTodo">
+				<column name="HAS_TODO" />
+			</basic>
+			<basic name="hasRepeat">
+				<column name="HAS_REPEAT" />
+			</basic>
+			<basic name="hasColor">
+				<column name="HAS_COLOR" />
+			</basic>
+			<basic name="hasWall">
+				<column name="HAS_WALL" />
+			</basic>
+			<basic name="text" />
+			<basic name="isDone">
+				<column name="IS_DONE" />
+			</basic>
+			<basic name="eventTime">
+				<column name="EVENT_TIME" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="period" />
+			<basic name="color" />
+			<basic name="createdDate">
+				<column name="CREATED_DATE" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<column name="MODIFIED_DATE" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="isDeleted">
+				<column name="IS_DELETED" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="net.evrem.service.model.impl.RemindInfoModelImpl">
+		<attributes>
+			<id name="remindInfoId">
+				<column name="REMINDINFO_ID" />
+			</id>
+			<basic name="noteId">
+				<column name="NOTE_ID" />
+			</basic>
+			<basic name="remindDate">
+				<column name="REMIND_DATE" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="remindSubject">
+				<column name="REMIND_SUBJECT" />
+			</basic>
+			<basic name="recipientEmails">
+				<column name="RECIPIENT_EMAILS" />
+			</basic>
+			<basic name="lastRemindTime">
+				<column name="LAST_REMIND_TIME" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="net.evrem.service.model.impl.TodoNoteModelImpl">
+		<attributes>
+			<id name="todoNoteId">
+				<column name="TODONOTE_ID" />
+			</id>
+			<basic name="noteId">
+				<column name="NOTE_ID" />
+			</basic>
+			<basic name="isDone">
+				<column name="IS_DONE" />
+			</basic>
+			<basic name="text" />
+			<basic name="sortNo">
+				<column name="SORT_NO" />
+			</basic>
+			<basic name="modifiedDate">
+				<column name="MODIFIED_DATE" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="net.evrem.service.model.impl.UserDetailModelImpl">
+		<attributes>
+			<id name="userDetailId">
+				<column name="USERDETAIL_ID" />
+			</id>
+			<basic name="userId">
+				<column name="USER_ID" />
+			</basic>
+			<basic name="timeZoneId">
+				<column name="TIMEZONE_ID" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="net.evrem.service.model.impl.GridItemImpl" name="GridItem">
+		<table name="grid_item" />
+		<attributes />
+	</entity>
+	<entity class="net.evrem.service.model.impl.NoteImpl" name="Note">
+		<table name="note" />
+		<attributes />
+	</entity>
+	<entity class="net.evrem.service.model.impl.RemindInfoImpl" name="RemindInfo">
+		<table name="remind_info" />
+		<attributes />
+	</entity>
+	<entity class="net.evrem.service.model.impl.TodoNoteImpl" name="TodoNote">
+		<table name="todo_note" />
+		<attributes />
+	</entity>
+	<entity class="net.evrem.service.model.impl.UserDetailImpl" name="UserDetail">
+		<table name="user_detail" />
+		<attributes />
+	</entity>
+</entity-mappings>

@@ -1,0 +1,39 @@
+{
+  "name": "evrem",
+  "version": "1.0.0",
+  "description": "Evrem",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.9.0",
+    "del": "^0.1.3",
+    "gulp": "^3.8.8",
+    "gulp-compass": "^2.0.3",
+    "gulp-if": "^1.2.5",
+    "gulp-minify-css": "^0.3.10",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^1.2.4",
+    "gulp-uglify": "^1.0.1",
+    "gulp-webpack": "^0.4.1",
+    "jsx-loader": "^0.12.2",
+    "path": "^0.4.9",
+    "webpack": "^1.4.9",
+    "yargs": "^1.3.2"
+  },
+  "dependencies": {
+    "events": "^1.0.2",
+    "flux": "^2.0.1",
+    "grid-list": "^0.1.1",
+    "jquery": "^2.1.1",
+    "moment": "^2.8.4",
+    "react": "^0.12.2",
+    "react-bootstrap": "^0.13.0",
+    "react-font-awesome": "^1.0.3",
+    "react-textarea-autosize": "^1.0.4"
+  }
+}

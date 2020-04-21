@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <localRepository>c:\work\projects\java\_repository</localRepository>
+	<pluginGroups>
+		<pluginGroup>com.liferay.maven.plugins</pluginGroup>
+	</pluginGroups>
+
+	
+	<profiles>
+		<profile>
+			<id>liferay</id>
+			<properties>
+				<liferay.version>6.2.1</liferay.version>
+				<liferay.maven.plugin.version>6.2.1</liferay.maven.plugin.version>
+				<liferay.auto.deploy.dir>c:\work\liferay-portal-6.2-ce-ga2\deploy</liferay.auto.deploy.dir>
+				<liferay.app.server.dir>c:\work\liferay-portal-6.2-ce-ga2\tomcat-7.0.42</liferay.app.server.dir>
+				<liferay.app.server.deploy.dir>c:\work\liferay-portal-6.2-ce-ga2\tomcat-7.0.42\webapps</liferay.app.server.deploy.dir>
+				<liferay.app.server.lib.global.dir>c:\work\liferay-portal-6.2-ce-ga2\tomcat-7.0.42\lib\ext</liferay.app.server.lib.global.dir>
+				<liferay.app.server.portal.dir>c:\work\liferay-portal-6.2-ce-ga2\tomcat-7.0.42\webapps\ROOT</liferay.app.server.portal.dir>
+			</properties>
+			
+			
+			<repositories>
+				<repository>
+					<id>mvnrepository2</id>
+					<url>http://www.mvnrepository.com</url>
+				</repository>
+				<repository>
+					<id>mvnrepository4</id>
+					<url>https://repository.liferay.com/nexus/content/groups/liferay-ce/</url>
+				</repository>
+				<repository>
+					<id>mvnrepository3</id>
+					<url>https://repository.liferay.com/nexus/content/groups/public/</url>
+				</repository>
+			</repositories>
+			
+		</profile>
+	</profiles>
+
+  <activeProfiles>
+    <activeProfile>liferay</activeProfile>
+  </activeProfiles>
+ 
+</settings>

@@ -1,0 +1,81 @@
+@import "../variables";
+@import "../mixins";
+@import "compass";
+@import "compass/css3/user-interface";
+@import "compass/css3/box-sizing";
+@import "compass/css3/user-interface";
+
+
+#wall-grid-container{
+	.gridster{
+		ul{
+			list-style-type: none;
+			li{
+				background-color: brown;
+				color: white;
+				overflow: hidden;
+				@include box-sizing('border-box');
+				padding: 15px;
+				.sn-inner-note-container{
+					cursor: default;
+					word-wrap: break-word;
+					white-space: pre;
+				}
+				.sn-actions-container{
+					float: right;
+					@include hover-transition;
+					.sn-action-button{
+						width: 15px;
+						height: 15px;
+						margin: 3px;
+						color: transparent;
+						display: none;
+						cursor: pointer;
+						@include hover-transition;
+						&:hover{
+							color: $lightGrayColor !important;
+						}
+					}
+				}
+				&:hover{
+					.sn-actions-container{
+						position: absolute;
+						right: 0px;
+						background-color: inherit;
+						opacity: 0.9;
+						width: 50px;
+						@include hover-transition;
+						.sn-action-button{
+							@include hover-transition;
+							float: right;
+							display: block;
+							color: white;
+							z-index: 10;
+						}
+						.sn-checked-btn{
+							color: $greenColor;
+						}
+					}
+				}
+				
+				.sn-check-btn{
+					@include hover-transition;
+					cursor: pointer;
+					margin-right: 5px;
+					float: left;
+					position: relative;
+					top: 1px;
+					
+					&:hover{
+						color: $greenColor;
+					}
+				}
+				
+				.sn-todo-text{
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+	
+}

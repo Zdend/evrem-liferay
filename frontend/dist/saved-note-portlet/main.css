@@ -1,0 +1,83 @@
+/* ---------- Variables ---------- */
+/*#d9534f; */
+/* ---------- CSS MIXINS ---------- */
+#wall-grid-container .gridster ul {
+  list-style-type: none;
+}
+#wall-grid-container .gridster ul li {
+  background-color: brown;
+  color: white;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 15px;
+}
+#wall-grid-container .gridster ul li .sn-inner-note-container {
+  cursor: default;
+  word-wrap: break-word;
+  white-space: pre;
+}
+#wall-grid-container .gridster ul li .sn-actions-container {
+  float: right;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#wall-grid-container .gridster ul li .sn-actions-container .sn-action-button {
+  width: 15px;
+  height: 15px;
+  margin: 3px;
+  color: transparent;
+  display: none;
+  cursor: pointer;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#wall-grid-container .gridster ul li .sn-actions-container .sn-action-button:hover {
+  color: #DBDBEA !important;
+}
+#wall-grid-container .gridster ul li:hover .sn-actions-container {
+  position: absolute;
+  right: 0px;
+  background-color: inherit;
+  opacity: 0.9;
+  width: 50px;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#wall-grid-container .gridster ul li:hover .sn-actions-container .sn-action-button {
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+  float: right;
+  display: block;
+  color: white;
+  z-index: 10;
+}
+#wall-grid-container .gridster ul li:hover .sn-actions-container .sn-checked-btn {
+  color: #5cb85c;
+}
+#wall-grid-container .gridster ul li .sn-check-btn {
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+  cursor: pointer;
+  margin-right: 5px;
+  float: left;
+  position: relative;
+  top: 1px;
+}
+#wall-grid-container .gridster ul li .sn-check-btn:hover {
+  color: #5cb85c;
+}
+#wall-grid-container .gridster ul li .sn-todo-text {
+  margin-left: 20px;
+}

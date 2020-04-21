@@ -1,0 +1,54 @@
+/* ---------- Variables ---------- */
+/*#d9534f; */
+/* ---------- CSS MIXINS ---------- */
+#upcoming-container .uc-termblocks-list li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 3.3333%;
+  width: 30%;
+}
+#upcoming-container .uc-termblocks-list li table {
+  table-layout: fixed;
+  width: 100%;
+}
+#upcoming-container .uc-termblocks-list li table tr:hover td:not(:last-of-type) {
+  background-color: #DBDBEA;
+  cursor: pointer;
+}
+#upcoming-container .uc-termblocks-list .uc-check-btn {
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+  cursor: pointer;
+  padding-left: 15px;
+}
+#upcoming-container .uc-termblocks-list .uc-check-btn:hover {
+  color: #bf1e2d;
+}
+#upcoming-container .uc-termblocks-list .uc-checked-btn:hover {
+  color: #5cb85c;
+}
+#upcoming-container .uc-termblocks-list .uc-date-col {
+  width: 23%;
+  min-width: 83px;
+}
+#upcoming-container .uc-termblocks-list .uc-time-col {
+  width: 9%;
+  min-width: 32px;
+}
+#upcoming-container .uc-termblocks-list .uc-text-col {
+  width: 70%;
+  overflow: hidden;
+}
+#upcoming-container .uc-termblocks-list .uc-check-col {
+  width: 0%;
+}
+#upcoming-container .uc-termblocks-list .uc-text-cell {
+  overflow: hidden;
+  white-space: pre;
+}
+#upcoming-container .uc-more-btn {
+  margin-top: 1em;
+  width: 100%;
+}

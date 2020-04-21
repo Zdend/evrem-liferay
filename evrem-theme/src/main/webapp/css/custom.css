@@ -1,0 +1,925 @@
+/* ---------- Variables ---------- */
+/*#d9534f; */
+/* ---------- CSS MIXINS ---------- */
+#new-note-container .text-options-container {
+  list-style-type: none;
+  display: block;
+}
+#new-note-container .text-options-container li {
+  float: left;
+}
+#new-note-container .note-textarea-wrapper {
+  width: 33.3333%;
+}
+#new-note-container .note-textarea-wrapper #new-note-input {
+  resize: none;
+  width: 97%;
+}
+#new-note-container .note-buttons-wrapper {
+  width: 65%;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#new-note-container .note-buttons-wrapper .note-buttons {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+#new-note-container .note-buttons-wrapper .note-buttons li {
+  list-style-type: none;
+  display: inline;
+  margin-left: 10px;
+  color: #DBDBEA;
+}
+#new-note-container .note-buttons-wrapper .note-buttons li i {
+  font-size: 35px;
+  padding: 3px;
+}
+#new-note-container .note-buttons-wrapper .note-buttons li i:hover {
+  color: #333333;
+}
+#new-note-container .note-buttons-wrapper .note-buttons li i.active {
+  color: #33485d;
+}
+#new-note-container .note-buttons-wrapper .note-buttons li i.save-btn {
+  margin-right: 30px;
+}
+#new-note-container .note-buttons-wrapper .note-buttons li i.save-btn:hover {
+  color: #428bca;
+}
+#new-note-container .note-buttons-wrapper .note-buttons li i.delete-btn:hover {
+  color: #bf1e2d;
+}
+#new-note-container .note-buttons-wrapper .note-buttons li i.clear-btn {
+  margin-left: 30px;
+}
+#new-note-container .note-buttons-wrapper .note-buttons li i.clear-btn:hover {
+  color: #5cb85c;
+}
+#new-note-container .note-buttons-wrapper .note-buttons li i.restore-btn:hover {
+  color: #f0ad4e;
+}
+#new-note-container .block-container > div {
+  width: 290px;
+  display: inline-table;
+}
+#new-note-container .block-container #note-color-select {
+  color: white;
+  border: none;
+  height: 24px;
+  margin-left: 1px;
+}
+#new-note-container .block-container #isdone-input {
+  border: none;
+  height: 24px;
+  margin-left: 1px;
+  color: white;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#new-note-container .block-container #isdone-input.isdone-checked {
+  background-color: #5cb85c;
+}
+#new-note-container .block-container #isdone-input.isdone-unchecked {
+  background-color: #bf1e2d;
+}
+#new-note-container .nn-message-container {
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+}
+#new-note-container .nn-message-container .nn-message-dismiss {
+  float: right;
+  cursor: pointer;
+}
+#new-note-container .nn-message-container .nn-message-dismiss:hover {
+  color: #333333;
+}
+#new-note-container .nn-message-container li {
+  list-style-type: none;
+}
+#new-note-container .nn-validation-container {
+  background-color: #bf1e2d;
+}
+#new-note-container .nn-info-container {
+  background-color: #5cb85c;
+}
+
+/* POPOVER IS NOT INSIDE OF PORTLET CONTAINER */
+.color-palette .color-square {
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+}
+.color-palette .color-square:hover {
+  border: 2px solid #2c3e50;
+}
+
+/* ---------- Variables ---------- */
+/*#d9534f; */
+/* ---------- CSS MIXINS ---------- */
+#wall-grid-container .gridster ul {
+  list-style-type: none;
+}
+#wall-grid-container .gridster ul li {
+  background-color: brown;
+  color: white;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 15px;
+}
+#wall-grid-container .gridster ul li .sn-inner-note-container {
+  cursor: default;
+  word-wrap: break-word;
+  white-space: pre;
+}
+#wall-grid-container .gridster ul li .sn-actions-container {
+  float: right;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#wall-grid-container .gridster ul li .sn-actions-container .sn-action-button {
+  width: 15px;
+  height: 15px;
+  margin: 3px;
+  color: transparent;
+  display: none;
+  cursor: pointer;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#wall-grid-container .gridster ul li .sn-actions-container .sn-action-button:hover {
+  color: #DBDBEA !important;
+}
+#wall-grid-container .gridster ul li:hover .sn-actions-container {
+  position: absolute;
+  right: 0px;
+  background-color: inherit;
+  opacity: 0.9;
+  width: 50px;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#wall-grid-container .gridster ul li:hover .sn-actions-container .sn-action-button {
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+  float: right;
+  display: block;
+  color: white;
+  z-index: 10;
+}
+#wall-grid-container .gridster ul li:hover .sn-actions-container .sn-checked-btn {
+  color: #5cb85c;
+}
+#wall-grid-container .gridster ul li .sn-check-btn {
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+  cursor: pointer;
+  margin-right: 5px;
+  float: left;
+  position: relative;
+  top: 1px;
+}
+#wall-grid-container .gridster ul li .sn-check-btn:hover {
+  color: #5cb85c;
+}
+#wall-grid-container .gridster ul li .sn-todo-text {
+  margin-left: 20px;
+}
+
+/* ---------- Variables ---------- */
+/*#d9534f; */
+/* ---------- CSS MIXINS ---------- */
+#calendar-container #calendar .fc-content {
+  color: white;
+}
+#calendar-container #calendar .fc-button {
+  border: none;
+  background-color: #33485d;
+  color: white;
+  text-decoration: none;
+  text-shadow: none;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#calendar-container #calendar .fc-button:hover, #calendar-container #calendar .fc-button:focus {
+  color: white;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#calendar-container #calendar .fc-corner-left, #calendar-container #calendar .fc-corner-right {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+}
+#calendar-container #calendar .fc-state-hover {
+  background-color: #45617e;
+}
+#calendar-container #calendar .fc-state-default {
+  background-image: none;
+}
+#calendar-container #calendar .fc-state-active {
+  background-color: #212e3c;
+}
+#calendar-container #calendar .fc-toolbar button {
+  height: 100%;
+  padding: 10px 15px;
+}
+#calendar-container #calendar .fc-event {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  margin: 0;
+}
+#calendar-container #calendar .fc-time-grid-event .fc-bg {
+  background-color: transparent;
+}
+#calendar-container #calendar .fc-basicWeek-view td.fc-day:hover, #calendar-container #calendar .fc-month-view td.fc-day:hover {
+  background-color: #b7c7d8;
+  cursor: pointer;
+}
+#calendar-container #calendar .fc-day-header {
+  background-color: #33485d;
+  font-size: 25px;
+  padding: 13px 0;
+  color: white;
+}
+#calendar-container #calendar .fc-more {
+  color: #33485d;
+}
+
+/* ---------- Variables ---------- */
+/*#d9534f; */
+/* ---------- CSS MIXINS ---------- */
+#upcoming-container .uc-termblocks-list li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 3.3333%;
+  width: 30%;
+}
+#upcoming-container .uc-termblocks-list li table {
+  table-layout: fixed;
+  width: 100%;
+}
+#upcoming-container .uc-termblocks-list li table tr:hover td:not(:last-of-type) {
+  background-color: #DBDBEA;
+  cursor: pointer;
+}
+#upcoming-container .uc-termblocks-list .uc-check-btn {
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+  cursor: pointer;
+  padding-left: 15px;
+}
+#upcoming-container .uc-termblocks-list .uc-check-btn:hover {
+  color: #bf1e2d;
+}
+#upcoming-container .uc-termblocks-list .uc-checked-btn:hover {
+  color: #5cb85c;
+}
+#upcoming-container .uc-termblocks-list .uc-date-col {
+  width: 23%;
+  min-width: 83px;
+}
+#upcoming-container .uc-termblocks-list .uc-time-col {
+  width: 9%;
+  min-width: 32px;
+}
+#upcoming-container .uc-termblocks-list .uc-text-col {
+  width: 70%;
+  overflow: hidden;
+}
+#upcoming-container .uc-termblocks-list .uc-check-col {
+  width: 0%;
+}
+#upcoming-container .uc-termblocks-list .uc-text-cell {
+  overflow: hidden;
+  white-space: pre;
+}
+#upcoming-container .uc-more-btn {
+  margin-top: 1em;
+  width: 100%;
+}
+
+/* ---------- Variables ---------- */
+/*#d9534f; */
+/* ---------- CSS MIXINS ---------- */
+.lg-title-background {
+  overflow-y: auto;
+}
+.lg-title-background body {
+  background: url("../images/title-background3.jpg") no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+#login-container {
+  min-height: 690px;
+}
+#login-container .lg-centered-box {
+  width: 40%;
+  min-height: 50%;
+  padding: 1em;
+  margin: auto;
+  text-align: center;
+}
+#login-container .lg-centered-box .lg-login-wrapper {
+  min-height: 400px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 3.5em 1em;
+  text-align: left;
+}
+#login-container .lg-centered-box .lg-login-wrapper .lg-login-inner {
+  margin: auto;
+  width: 276px;
+}
+#login-container .lg-centered-box .lg-login-wrapper .lg-login-inner h2 {
+  font-size: 1.5em;
+  line-height: 20px;
+  margin: 0 0 1em 0;
+  font-weight: 200;
+}
+#login-container .lg-centered-box .lg-login-block .lg-login-btn {
+  float: left;
+}
+#login-container .lg-centered-box .lg-login-block .lg-remember-forgotten {
+  float: right;
+  text-align: right;
+  margin-left: 1em;
+}
+#login-container .lg-centered-box .lg-login-block .lg-remember-forgotten li {
+  list-style-type: none;
+  font-size: 14px;
+}
+#login-container .lg-centered-box .lg-login-block .lg-remember-forgotten li span {
+  font-size: 14px;
+}
+#login-container .lg-centered-box .lg-social-login-block i {
+  font-size: 3em;
+  margin: 0 0.55em;
+}
+#login-container .lg-centered-box input[type="text"], #login-container .lg-centered-box input[type="password"] {
+  width: 260px;
+  color: #33485d;
+}
+#login-container .lg-centered-box .lg-header-wrapper {
+  display: table;
+}
+#login-container .lg-centered-box .lg-header-wrapper .lg-header-logo {
+  background: transparent url("../images/evrem-bird-logo70.png") no-repeat;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1em auto;
+}
+#login-container .lg-centered-box .lg-header-wrapper .lg-title-welcome {
+  font-weight: 300;
+  margin-bottom: 0.4em;
+  text-shadow: 1px 1px 7px #33485d;
+}
+#login-container .lg-centered-box .lg-header-wrapper .lg-title-description {
+  font-size: 1.4em;
+  line-height: 30px;
+  text-shadow: 1px 1px 7px #33485d;
+}
+#login-container .lg-centered-box .lg-desc-bold {
+  font-weight: 600;
+}
+#login-container .lg-centered-box .lg-footer-wrapper {
+  margin-top: 1em;
+}
+
+#lg-signup-captcha {
+  width: 310px;
+}
+
+.lg-registration-confirmation {
+  text-align: left;
+}
+.lg-registration-confirmation .modal-body {
+  width: 340px;
+  margin: 0 auto;
+}
+.lg-registration-confirmation .modal-body h4 {
+  margin: 1em 0;
+  font-weight: 200;
+  font-size: 20px;
+}
+.lg-registration-confirmation #timezone-select {
+  width: 250px;
+}
+
+/* ---------- Variables ---------- */
+/*#d9534f; */
+/* ---------- CSS MIXINS ---------- */
+#filter-container .fr-data-grid {
+  table-layout: fixed;
+  width: 100%;
+}
+#filter-container .fr-data-grid td {
+  min-width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0;
+}
+#filter-container .fr-data-grid td:not(:first-of-type) {
+  padding-left: 0.5em;
+}
+#filter-container .fr-data-grid th {
+  font-weight: 400;
+  color: white;
+  background-color: #33485d;
+  padding: 0.6em 0.5em;
+  text-align: center;
+}
+#filter-container .fr-data-grid .fr-grid-body tr:hover {
+  background-color: #DBDBEA;
+}
+#filter-container .fr-color-cell {
+  height: 2em;
+}
+#filter-container .fr-action-cell i {
+  padding: 0 0.2em;
+}
+#filter-container .fr-centered-align {
+  text-align: center;
+  margin: 0 auto;
+}
+#filter-container .fr-color-th {
+  width: 2em;
+}
+#filter-container .fr-boolean-th {
+  width: 3em;
+}
+#filter-container .fr-date-th {
+  width: 7.6em;
+}
+#filter-container .fr-actions-th {
+  width: 3.4em;
+}
+#filter-container .fr-variable-actions {
+  margin-top: 2em;
+  float: right;
+}
+#filter-container .fr-variable-actions button {
+  margin-left: 1em;
+}
+#filter-container .fr-more-btn {
+  width: 100%;
+}
+
+/* ---------- Variables ---------- */
+/*#d9534f; */
+/* ---------- CSS MIXINS ---------- */
+
+/* ---------- Variables ---------- */
+/*#d9534f; */
+/* ---------- CSS MIXINS ---------- */
+/* ---------- Variables ---------- */
+/*#d9534f; */
+/* ---------- CSS MIXINS ---------- */
+.evrem-message .message-container {
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  min-height: 2.5em;
+}
+.evrem-message .message-container .message-dismiss {
+  float: right;
+  cursor: pointer;
+}
+.evrem-message .message-container .message-dismiss:hover {
+  color: #333333;
+}
+.evrem-message .validation-container {
+  background-color: #bf1e2d;
+}
+.evrem-message .info-container {
+  background-color: #5cb85c;
+}
+
+/* ---------- Base styles ---------- */
+html {
+  overflow-y: scroll;
+}
+
+body {
+  color: #333333;
+  background-color: transparent;
+}
+body ::-moz-selection {
+  color: white;
+  background: #333333;
+}
+body ::selection {
+  color: white;
+  background: #333333;
+}
+
+#wrapper {
+  padding: 0 5em 0;
+  min-width: 960px;
+}
+
+/* ---------- Header ---------- */
+#heading {
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#heading .site-title {
+  width: 90px;
+  float: left;
+  margin-top: 35px;
+}
+#heading .active-a, #heading #navigation ul li a:focus, #heading #navigation ul li a:hover, #heading #navigation ul .selected a, #heading .profile-link-container #profile-link-inner:focus, #heading .profile-link-container #profile-link-inner:hover, #heading .profile-link-container #profile-link-inner.selected, #heading .profile-link-container a[aria-expanded="true"] #profile-link-inner {
+  background-color: #f0ad4e;
+  color: white;
+}
+#heading #navigation ul {
+  list-style-type: none;
+  font-family: Raleway;
+  font-weight: 100;
+  margin: auto;
+  text-align: center;
+}
+#heading #navigation ul li {
+  font-size: 40px;
+  margin-top: 60px;
+  display: inline-block;
+}
+#heading #navigation ul li a {
+  color: #bf1e2d;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid transparent;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#heading #navigation ul li a:focus, #heading #navigation ul li a:hover {
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#heading .profile-link-container {
+  margin-top: 30px;
+  margin-right: 40px;
+  float: right;
+}
+#heading .profile-link-container #profile-link-inner {
+  font-size: 40px;
+  padding: 17px;
+  color: #bf1e2d;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#heading .profile-link-container #profile-link-inner:focus, #heading .profile-link-container #profile-link-inner:hover, #heading .profile-link-container #profile-link-inner.selected {
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#heading .profile-link-container a[aria-expanded="true"] #profile-link-inner {
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+
+/* ---------- Footer ---------- */
+#footer {
+  font-weight: 300;
+  color: #999999;
+  margin: 0 10px 150px 10px;
+}
+#footer a {
+  color: #999999;
+  margin-right: 15px;
+}
+#footer a:focus, #footer a:hover {
+  color: #333333;
+}
+#footer #left-footer-container {
+  float: left;
+}
+#footer #right-footer-container {
+  float: right;
+}
+#footer #right-footer-container i {
+  color: #DBDBEA;
+  font-size: 40px;
+  margin-left: 25px;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#footer #right-footer-container i.fa-facebook:hover {
+  color: #3c599f;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#footer #right-footer-container i.fa-twitter:hover {
+  color: #00acee;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+#footer #right-footer-container i.fa-google-plus:hover {
+  color: #d82a21;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+
+/* ---------- Mixins ---------- */
+.cleaner {
+  clear: both;
+  height: 1px;
+  width: 100%;
+}
+
+.hide, .invisible, .evrem > :not(.portlet-dockbar) #hrefFm {
+  position: absolute;
+  top: 9999px;
+  right: 9999px;
+}
+
+.nocursor {
+  cursor: default !important;
+}
+
+.pointer-cursor {
+  cursor: pointer !important;
+}
+
+.invisible, .visible {
+  overflow: hidden;
+}
+
+.invisible {
+  visibility: hidden;
+  opacity: 0;
+  -moz-transition: all, 0.7s, ease-in-out, 0s;
+  -o-transition: all, 0.7s, ease-in-out, 0s;
+  -webkit-transition: all, 0.7s, ease-in-out, 0s;
+  transition: all, 0.7s, ease-in-out, 0s;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  -moz-transition: opacity, 0.7s, ease-in-out;
+  -o-transition: opacity, 0.7s, ease-in-out;
+  -webkit-transition: opacity, 0.7s, ease-in-out;
+  transition: opacity, 0.7s, ease-in-out;
+}
+
+.hover-transition {
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+
+.striked-text {
+  text-decoration: line-through;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/* ---------- Spinner ---------- */
+.spinner {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 3000;
+  opacity: 0.97;
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  display: none;
+}
+.spinner.active {
+  -moz-animation-play-state: running;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  display: block;
+}
+.spinner .spinner-square {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  margin: 30vh auto;
+  -moz-animation: sk-rotatePlane 1.2s infinite ease-in-out;
+  -webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
+  animation: sk-rotatePlane 1.2s infinite ease-in-out;
+}
+
+@-moz-keyframes sk-rotatePlane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+@-webkit-keyframes sk-rotatePlane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+@keyframes sk-rotatePlane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+/* ---------- Page layout ---------- */
+.wall-layout .row-fluid [class*="span"], .wall-layout [class*="span"] {
+  margin-left: 0px;
+}
+.wall-layout .row-fluid .span4 {
+  width: 33.333333%;
+}
+
+/* ---------- Bootswatch modification ----------*/
+.nav .user-notification-link {
+  padding: 10px 15px 9px 10px !important;
+}
+.nav .dropdown {
+  height: 50px;
+}
+
+.evrem > :not(.portlet-dockbar) div {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.evrem > :not(.portlet-dockbar) td.separator {
+  border: none !important;
+}
+.evrem > :not(.portlet-dockbar) img {
+  max-width: none;
+}
+.evrem > :not(.portlet-dockbar) a {
+  text-decoration: none;
+}
+.evrem > :not(.portlet-dockbar) .collapse {
+  display: none;
+  visibility: hidden;
+}
+.evrem > :not(.portlet-dockbar) .collapse.in {
+  display: block;
+  visibility: visible;
+}
+.evrem > :not(.portlet-dockbar) tr.collapse.in {
+  display: table-row;
+}
+.evrem > :not(.portlet-dockbar) tbody.collapse.in {
+  display: table-row-group;
+}
+.evrem > :not(.portlet-dockbar) .collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: .35s;
+  -o-transition-duration: .35s;
+  transition-duration: .35s;
+  -webkit-transition-property: height, visibility;
+  -o-transition-property: height, visibility;
+  transition-property: height, visibility;
+}
+.evrem > :not(.portlet-dockbar) ul {
+  margin: 0;
+}
+.evrem > :not(.portlet-dockbar) .row-fluid [class*="span"], .evrem > :not(.portlet-dockbar) [class*="span"] {
+  margin-left: 0px;
+}
+.evrem > :not(.portlet-dockbar) .row-fluid .span4 {
+  width: 33.333333%;
+}
+.evrem > :not(.portlet-dockbar) .dropdown-menu {
+  -moz-border-radius: 0 / 0;
+  -webkit-border-radius: 0 0;
+  border-radius: 0 / 0;
+  padding: 0px;
+  min-width: 180px;
+  border: none;
+  left: -115px;
+  margin-top: 1px;
+}
+.evrem > :not(.portlet-dockbar) .dropdown-menu > li > a {
+  padding: 10px 20px;
+}
+.evrem > :not(.portlet-dockbar) .dropdown-menu > li > a:hover, .evrem > :not(.portlet-dockbar) .dropdown-menu > li > a:focus, .evrem > :not(.portlet-dockbar) .dropdown-menu > li > .dropdown-submenu:hover > a, .evrem > :not(.portlet-dockbar) .dropdown-menu > li > .dropdown-submenu:focus > a {
+  background-color: #f0ad4e;
+  background-image: none;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+.evrem > :not(.portlet-dockbar) .dropdown-menu .divider {
+  border-bottom: 0;
+  margin: 0;
+}
+.evrem > :not(.portlet-dockbar) .modal-footer {
+  -moz-border-radius: 0 / 0;
+  -webkit-border-radius: 0 0;
+  border-radius: 0 / 0;
+}
+.evrem > :not(.portlet-dockbar) .portlet-title {
+  position: relative;
+  bottom: 3px;
+  right: 5px;
+}
+.evrem > :not(.portlet-dockbar) h1 {
+  font-size: 48px;
+  font-weight: 200;
+}
+.evrem > :not(.portlet-dockbar) h2 {
+  font-size: 36px;
+  font-weight: 200;
+}
+.evrem > :not(.portlet-dockbar) h3 {
+  font-size: 28px;
+  font-weight: 200;
+}
+.evrem > :not(.portlet-dockbar) h4 {
+  font-size: 24px;
+  font-weight: 200;
+}
+.evrem > :not(.portlet-dockbar) h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+@media (max-width: 979px) {
+  .evrem > :not(.portlet-dockbar) .btn {
+    padding: 9px 20px;
+  }
+}
+
+#p_p_id_commonsfunctionportlet_WAR_commonsfunctionportlet_ {
+  display: none;
+}
